@@ -15,6 +15,12 @@
     "watch:scripts": "webpack --watch",
     "watch:styles": "node-sass --include-path=node_modules/ --watch html/assets/styles/main.scss tmp/main.css & postcss tmp/main.css --use autoprefixer cssnano -o html/assets/styles/main.css --no-map --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alastairjwright/alastairwright.git"
+  },
+  "author": "Alastair Wright <alastairjwright@gmail.com>",
+  "license": "Apache-2.0",
   "dependencies": {
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0",
