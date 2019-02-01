@@ -1,0 +1,126 @@
+.hot-dog {
+  background-color: $color-black;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  .bbh__sheep {
+    position: absolute;
+    top: 30px;
+    height: 20px;
+  }
+
+  #toggleMic {
+    z-index: 9999999;
+  }
+
+  .left__text {
+    position: absolute;
+    left: 22px;
+    transform: translate3d(-50%, 0, 0) rotate(-90deg);
+    color: $color-blue;
+    font-family: "BBH Sequencia";
+  }
+
+  .right__text {
+    right: 22px;
+    transform: translate3d(50%, 0, 0) rotate(90deg);
+    position: absolute;
+    color: $color-blue;
+    font-family: "BBH Sequencia";
+  }
+
+  .hot-dog__svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .hot-dog__svg__text {
+    font-size: 32px;
+    font-weight: bold;
+    fill: $color-blue;
+  }
+
+  .hot-dog__jelly {
+    cursor: pointer;
+    z-index: 1;
+    letter-spacing: 1px;
+
+    &:hover {
+      animation: hover_color 0.3s linear 0s infinite;
+    }
+
+    span {
+      position: relative;
+      transition: all;
+      display: inline-block;
+    }
+  }
+
+  .hot_dog_cta_mobile {
+    display: none;
+  }
+
+  .hot_dog_cta_desktop {
+    display: block;
+  }
+
+  .hot-dog__cta {
+    font-family: "BBH Sequencia";
+    position: absolute;
+    bottom: 30px;
+    color: $color-blue;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .hot-dog__jelly__path {
+    fill: $color-blue;
+  }
+
+  .hot-dog__jelly--jelly-mode .hot-dog__jelly__path {
+    fill: $color-peach;
+  }
+
+  &.hot-dog__jelly--jelly-mode {
+    background-color: $color-blue;
+
+    .right__text,
+    .left__text,
+    .hot-dog__cta {
+      color: $color-white;
+    }
+
+    .hot-dog__svg__text {
+      fill: $color-white;
+    }
+  }
+}
+
+@keyframes hover_color {
+  0% {
+    color: white;
+    fill: white;
+  }
+  100% {
+    color: $color-blue;
+    fill: $color-blue;
+  }
+}
+
+@keyframes hover_color_big {
+  0% {
+    color: black;
+  }
+  100% {
+    color: $color-blue;
+  }
+}

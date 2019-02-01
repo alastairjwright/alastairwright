@@ -1,0 +1,143 @@
+.card {
+  width: 660px;
+  background-color: white;
+  height: 437px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 50px 50px 0;
+  font-family: GTAmerica;
+  box-shadow: 10px 12px 54px rgba(0,0,0,.2);
+
+  .marquee {
+    color: #000;
+    font-size: 72px;
+    font-weight: 700;
+    margin-left: -77%;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+  }
+
+  .marquee__animate {
+    /* Apply animation to this element */
+    -moz-animation: marqueeText 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    -webkit-animation: marqueeText 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    animation: marqueeText 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    animation-fill-mode: forwards;
+  }
+  @keyframes marqueeText {
+   0%   {
+   transform: translateY(1500%) rotate(-90deg);
+   }
+   100% {
+   transform: translateY(-175%) rotate(-90deg);
+   }
+  }
+
+  .marquee__reverse {
+    /* Apply animation to this element */
+    -moz-animation: marqueeReverse 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    -webkit-animation: marqueeReverse 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    animation: marqueeReverse 4.5s cubic-bezier(0.200, 0.450, 0.280, 1.175);
+    animation-fill-mode: forwards;
+  }
+  @keyframes marqueeReverse {
+   0%   {
+   transform: translateY(-175%) rotate(-90deg);
+   }
+   100% {
+   transform: translateY(1500%) rotate(-90deg);
+   }
+  }
+
+  .header {
+    color: black;
+    padding-left: 150px;
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50px;
+    padding-right: 50px;
+    width: 100%;
+    align-items: center;
+    font-size: 14px;
+
+    .dotted-line {
+      background-image: linear-gradient(to right, $color-peach 10%, rgba(255, 255, 255, 0) 0%);
+      background-position: top;
+      background-size: 10px 2px;
+      background-repeat: repeat-x;
+      display: block;
+      margin-top: 40px;
+      width: 100%;
+      height:2px;
+    }
+
+    .card_gif {
+      width: 50%;
+      transform: translateX(100%);
+    }
+  }
+
+  .body {
+    bottom: 0;
+    color: #7b7b7b;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 0 50px 50px 150px;
+    position: absolute;
+    width: 100%;
+    ul {
+      display: inline-block;
+      width: 49%;
+      &.schedule {
+        width:100%;
+        li {
+          font-size:20px;
+          line-height:30px;
+        }
+      }
+      li {
+        font-size:26px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .card {
+    width:100%;
+    height: auto;
+    .marquee {
+      margin-top: 500px;
+      font-size: 50px;
+    }
+    .header {
+      padding-left: 100px;
+      .card_gif {
+        transform: none;
+      }
+      .header-left {
+        margin-top:50px;
+      }
+      .header-right {
+        align-self: flex-start;
+        position: absolute;
+      }
+    }
+    .body {
+      padding: 0 50px 50px 100px;
+      font-size: 16px;
+      line-height: 24px;
+      ul {
+        li {
+          font-size: 18px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}

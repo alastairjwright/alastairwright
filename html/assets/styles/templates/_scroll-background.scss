@@ -1,0 +1,79 @@
+.scroll_background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: $color-blue;
+}
+
+.svg-container {
+  width: 223px;
+  position: fixed;
+
+  .rotate-container {
+    transform: rotate(45deg);
+  }
+
+  svg {
+    transform: rotate(-45deg);
+    margin-bottom: 85px;
+    width: 223px;
+    height: 223px;
+  }
+
+  &#svg-container-1 {
+    left: -50px;
+    top: -6000px;
+  }
+
+  &#svg-container-2 {
+    left: -188px;
+    top: -5576px;
+  }
+
+  &#svg-container-3 {
+    left: -328px;
+    top: -5152px;
+  }
+
+  &#svg-container-4 {
+    left: -468px;
+    top: -4728px;
+  }
+
+  &#svg-container-5 {
+    left: -608px;
+    top: -4304px;
+  }
+
+  &#svg-container-6 {
+    left: -748px;
+    top: -3880px;
+  }
+
+  &#svg-container-7 {
+    left: -888px;
+    top: -3456px;
+  }
+}
+
+.test_section {
+  padding-top: 20%;
+  width: 100%;
+  height: 100vh;
+  &:last-of-type {
+    margin-bottom: 20%;
+  }
+}
+
+.is-mobile {
+  .test_section {
+    height: auto;
+    padding-top: 0;
+    margin-bottom: 100px;
+  }
+}

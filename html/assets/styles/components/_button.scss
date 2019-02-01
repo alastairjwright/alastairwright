@@ -1,0 +1,49 @@
+// .button {
+// }
+
+// .button--primary {
+// }
+
+// .button--secondary {
+// }
+.hot-dog__cta {
+  a {
+    background-color: transparent;
+    padding: 25px;
+    position: relative;
+  }
+  .hot_dog_cta_container {
+    display: flex;
+    align-items: center;
+    img.squiggle {
+      display: inline-block;
+      width: auto;
+      height: 5px;
+    }
+  }
+  .hot_dog_cta_container:hover {
+    a {
+      animation: hover_color 0.3s linear 0s infinite;
+    }
+    #arrow-svg {
+      animation: hover_color 0.3s linear 0s infinite;
+    }
+  }
+}
+
+.hot-dog__jelly {
+  &:hover {
+    animation: hover_color 0.3s linear 0s infinite;
+  }
+}
+
+@keyframes hover_color {
+  0% {
+    color: white;
+    fill: white;
+  }
+  100% {
+    color: $color-blue;
+    fill: $color-blue;
+  }
+}

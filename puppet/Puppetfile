@@ -1,0 +1,4 @@
+forge "https://forgeapi.puppetlabs.com"
+
+mod 'puppet-php', '5.2.0'
+mod 'puppetlabs-apache', '3.0.0'
